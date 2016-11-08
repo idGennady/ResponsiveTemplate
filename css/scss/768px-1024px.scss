@@ -1,0 +1,195 @@
+// global edit
+@media (min-width: 768px) and (max-width: 1024px){
+  body{
+    // block header open
+    & header{
+      position: fixed;
+      width: 100vw;
+      top: 0;
+      z-index: 1;
+      background: #373c3f;
+
+      & nav{
+        display: none;
+
+        & .close{
+          display: flex;
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          right: 10px;
+          top: 10px;
+          & i.i-close{
+            background: #373c3f url("../../images/cancel.svg") no-repeat 0 0 / 100% 100%;
+            width: 100%;
+          }
+        }
+
+        &.close,
+        &.open{
+          display: flex;
+          position: fixed;
+          top: 100vh;
+          animation-name: closeMenu;
+          animation-duration: 3s;
+          background: #373c3f;
+          width: 100vw;
+          height: 100vh;
+
+          & ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+
+            & li{
+              padding: 10px 0;
+              & a{
+                font-size: 20px;
+              }
+            }
+          }
+        }
+
+        &.open{
+          top: 0;
+          animation-name: openMenu;
+        }
+      }
+      & .mobile-navigation{
+        display: flex;
+        justify-content: space-between;
+
+        & h2{
+          padding: 15px 0 15px 40px;
+          font-size: 26px;
+          color: #e8e7e7;
+          font-weight: 300;
+        }
+
+        & .sandwich{
+          background: #202529;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          & .i-sandwich{
+            background: #202529 url("../../images/sandwich.svg") no-repeat 0 0 / 100% 100%;
+            width: 100px;
+            height: 30px;
+          }
+        }
+      }
+    }
+    // block header close
+
+    // block main open
+    & main{
+      margin-top: 105px;
+
+      // block one open
+      & .block-one{
+        & .information{
+          padding: 50px 180px 50px 50px;
+
+          & h2{
+            font-size: 46px;
+          }
+
+          & p{
+            padding: 30px 0 0;
+            font-size: 28px;
+
+            & i.i-more{
+              width: 24px;
+              height: 22px;
+              right: 14px;
+            }
+          }
+        }
+      }
+      // block one close
+
+
+      // block two open
+      & .block-two{
+        & .left,
+        & .right{
+          padding: 60px 0;
+        }
+
+        & .left{
+          & p{
+            font-size: 28px;
+          }
+        }
+
+        & .right{
+          & i.i-more{
+            width: 28px;
+            height: 28px;
+          }
+        }
+      }
+      // block two close
+
+      // block three open
+      & .block-three{
+        flex-direction: column;
+        height: auto;
+
+        & > div{
+          height: 500px;
+          margin-bottom: -4px;
+        }
+
+        & img{
+          width: 100vw;
+          height: 500px;
+        }
+      }
+      // block three close
+    }
+    // block main close
+
+    // block footer open
+    & footer{
+      & .information{
+        padding: 30px 35px 100px;
+
+        & a{
+          font-size: 28px;
+        }
+      }
+    }
+    // block footer close
+
+  }
+}
+
+@keyframes openMenu{
+  0%   {top: -100vh;}
+  100% {top: 0;}
+}
+
+@keyframes closeMenu{
+  0%   {top: 0;}
+  100% {top: 100vh;}
+}
+
+// horizontal position
+@media (min-width: 768px) and (max-width: 1024px) and (orientation:landscape){
+
+  body main .block-one .information { padding: 80px 250px 80px 50px }
+
+}
+
+// vertical position
+@media (min-width: 768px) and (max-width: 1024px) and (orientation:portrait){
+
+}
+
+
